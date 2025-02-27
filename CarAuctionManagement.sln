@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C37A89EB-F47D-4C4B-952F-927669B53D6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{9349EAA9-35BE-482A-902F-DFFE3755787F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{549D5588-1D41-4BF0-AAFE-BB9863648C35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{B201FD65-288D-4EA2-961F-85CDE21F9A97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{E965B354-5F9E-4F95-B23F-5FE7E74E7648}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{2294EEFB-CE91-40C7-965C-65079D998637}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71D29CD4-FBB5-4228-9A67-A8028C013B0B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{F9282528-1548-4B98-AFEF-032B8DABE3E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{F27CB485-7F86-4591-A2BB-C7851C718AAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Dto", "src\Api.Dto\Api.Dto.csproj", "{23A8245F-A664-44E4-A3E5-346D460225D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{7EACE58C-B39F-4BB5-B551-646F6E40319B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{B029E48E-4D4C-435D-9456-2E04A4C5EB83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLScripts", "SQLScripts", "{A01CDE3A-0663-48CA-B80C-2A26FC5A7D72}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\SQLScripts\001_CreateTable_Vehicle.sql = deploy\SQLScripts\001_CreateTable_Vehicle.sql
+		deploy\SQLScripts\002_CreateTable_Auction.sql = deploy\SQLScripts\002_CreateTable_Auction.sql
+		deploy\SQLScripts\003_CreateTable_User.sql = deploy\SQLScripts\003_CreateTable_User.sql
+		deploy\SQLScripts\004_CreateTable_Bid.sql = deploy\SQLScripts\004_CreateTable_Bid.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Unit", "tests\Tests.Unit\Tests.Unit.csproj", "{64CB35C9-EFFA-46D5-8E72-8561836CCEB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{88FAA098-6A26-485B-83FE-2601CFA61112}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\Docker\Dockerfile = deploy\Docker\Dockerfile
+		deploy\Docker\SqlServer.Dockerfile = deploy\Docker\SqlServer.Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9282528-1548-4B98-AFEF-032B8DABE3E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9282528-1548-4B98-AFEF-032B8DABE3E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9282528-1548-4B98-AFEF-032B8DABE3E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9282528-1548-4B98-AFEF-032B8DABE3E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27CB485-7F86-4591-A2BB-C7851C718AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27CB485-7F86-4591-A2BB-C7851C718AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27CB485-7F86-4591-A2BB-C7851C718AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27CB485-7F86-4591-A2BB-C7851C718AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A8245F-A664-44E4-A3E5-346D460225D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A8245F-A664-44E4-A3E5-346D460225D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A8245F-A664-44E4-A3E5-346D460225D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A8245F-A664-44E4-A3E5-346D460225D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EACE58C-B39F-4BB5-B551-646F6E40319B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EACE58C-B39F-4BB5-B551-646F6E40319B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EACE58C-B39F-4BB5-B551-646F6E40319B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EACE58C-B39F-4BB5-B551-646F6E40319B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CB35C9-EFFA-46D5-8E72-8561836CCEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CB35C9-EFFA-46D5-8E72-8561836CCEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CB35C9-EFFA-46D5-8E72-8561836CCEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CB35C9-EFFA-46D5-8E72-8561836CCEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B201FD65-288D-4EA2-961F-85CDE21F9A97} = {C37A89EB-F47D-4C4B-952F-927669B53D6A}
+		{E965B354-5F9E-4F95-B23F-5FE7E74E7648} = {C37A89EB-F47D-4C4B-952F-927669B53D6A}
+		{2294EEFB-CE91-40C7-965C-65079D998637} = {C37A89EB-F47D-4C4B-952F-927669B53D6A}
+		{F9282528-1548-4B98-AFEF-032B8DABE3E0} = {E965B354-5F9E-4F95-B23F-5FE7E74E7648}
+		{F27CB485-7F86-4591-A2BB-C7851C718AAE} = {2294EEFB-CE91-40C7-965C-65079D998637}
+		{23A8245F-A664-44E4-A3E5-346D460225D8} = {B201FD65-288D-4EA2-961F-85CDE21F9A97}
+		{7EACE58C-B39F-4BB5-B551-646F6E40319B} = {B201FD65-288D-4EA2-961F-85CDE21F9A97}
+		{B029E48E-4D4C-435D-9456-2E04A4C5EB83} = {71D29CD4-FBB5-4228-9A67-A8028C013B0B}
+		{A01CDE3A-0663-48CA-B80C-2A26FC5A7D72} = {B029E48E-4D4C-435D-9456-2E04A4C5EB83}
+		{64CB35C9-EFFA-46D5-8E72-8561836CCEB1} = {549D5588-1D41-4BF0-AAFE-BB9863648C35}
+		{88FAA098-6A26-485B-83FE-2601CFA61112} = {B029E48E-4D4C-435D-9456-2E04A4C5EB83}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCBCF59E-E73D-4531-827E-D1EB8FE2ED80}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+version: "3.5"
+services:
+
+  bca-car_auction_management:
+    container_name: bca-car_auction_management
+    image: bca-car_auction_management
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    build:
+      context: .
+      dockerfile: deploy/Docker/Dockerfile
+    ports:
+      - 12000:12000
+    depends_on:
+      - sqlserver
+
+  # Infra
+  sqlserver:
+    container_name: bca-car_auction_management-sqlserver
+    image: mcr.microsoft.com/mssql/server:latest
+    build: 
+        context: .
+        dockerfile: deploy/Docker/SqlServer.Dockerfile
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "BCA_db_p4ssw0rd"
+      MSSQL_PID: Developer
+    ports:
+      - 1433:1433
+    volumes:
+      - ./deploy/SQLScripts:/scripts/bca-scripts:ro
+      - ./deploy/Docker:/scripts/base-scripts

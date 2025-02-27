@@ -1,0 +1,13 @@
+USE [SVC_CarAuctionManagement];
+
+CREATE TABLE [dbo].[Bid]
+(
+	[Id]			UNIQUEIDENTIFIER	NOT NULL,
+	[AuctionId]		UNIQUEIDENTIFIER	NOT NULL,
+	[CreatedDate]	DATETIMEOFFSET(3)	NOT NULL,
+	[Amount]		DECIMAL(19,4)		NOT NULL,
+	[UserId]		UNIQUEIDENTIFIER	NOT NULL,
+	CONSTRAINT [PK_Bid_Id] PRIMARY KEY CLUSTERED ([Id] ASC),
+	CONSTRAINT [FK_Bid_Auction] FOREIGN KEY ([AuctionId]) REFERENCES [dbo].[Auction]([Id]),
+	CONSTRAINT [FK_Bid_User] FOREIGN KEY ([UserId]) REFERENCES [dbo].[User]([Id])
+);
